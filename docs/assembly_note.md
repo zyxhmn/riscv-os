@@ -82,7 +82,7 @@ stop:	j stop		# statement in one line
 - funct3/funct7 和 opcode 一起决定最终的指令类型
 - 指令在内存中按照小端序排列
 
-#### 六种指令格式
+####  六种指令格式
 
 rs2,rs1,rd为寄存器代号，rd用于存放计算结果
 
@@ -98,3 +98,23 @@ rs2,rs1,rd为寄存器代号，rd用于存放计算结果
 - J-type: （Jump），每条指令含有一个寄存器参数再加上一个立即数参数（宽度为 20
   bits）
 
+## RISC-V汇编指令详解
+
+### 算数运算指令
+
+#### ADD 
+
+``` assembly
+语法： ADD RD,RS1,RS2
+例子： add x5,x6,x7
+```
+
+-   opcode (7): 0110011（OP）
+- funct3 取值 000；funct7 取值 0000000
+- rs1 (5): 第一个 operand (“source register 1”)
+-  rs2 (5): 第二个 operand (“source register 2”)
+-  rd (5): “destination register” 用于存放求和的结果
+
+  
+
+​      
